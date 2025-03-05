@@ -1,0 +1,427 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.navbar .navbar-brand {
+    margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+    color: black !important;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #00C8FF !important; 
+    transform: scale(1.1); 
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item .nav-link[aria-current="page"] {
+    color: #00C8FF !important; 
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-item .nav-link[aria-current="page"]::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00C8FF;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar-nav .nav-item.dropdown:hover .nav-link {
+    color: #00C8FF !important; 
+}
+
+.dropdown-menu {
+    background-color: black !important; 
+    border: none; 
+}
+
+.dropdown-menu .dropdown-item {
+    color: white !important;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #00C8FF !important; 
+    color: black !important; 
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.btn {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%; /* Moves text up slightly */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5); /* Background for visibility */
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 10; /* Ensures it stays on top */
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+    .carousel-caption p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+    .carousel-caption {
+        bottom: 10%; /* Moves captions up a bit */
+        width: 90%; /* Makes them more readable */
+        padding: 10px;
+    }
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: white; /* Light Grey Background */
+    position: relative;
+    margin-top: 0;
+    padding-top: 50px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout for Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Equal Columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Card */
+.service-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    padding-bottom: 50px; /* Space for Arrow */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift on Hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Service Image */
+.service-card img {
+    width: 100%;
+    height: 180px; /* Fixed Height */
+    object-fit: cover;
+}
+
+/* Title & Description */
+.service-card h3 {
+    font-size: 1.4rem;
+    margin: 15px 0 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px;
+}
+
+/* Right Arrow Button */
+.arrow-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.arrow {
+    font-size: 1.8rem;
+    color: #777; /* Default Gray */
+    transition: color 0.3s ease-in-out;
+}
+
+.arrow-btn:hover .arrow {
+    color: #00C8FF; /* Changes to Blue on Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns on Tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 Column on Mobile */
+    }
+}
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.why-choose-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden; 
+    scroll-behavior: auto;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+/* Hide scrollbar for Chrome/Safari */
+.why-choose-container::-webkit-scrollbar {
+    display: none;
+}
+
+.why-card {
+    flex: 0 0 auto;
+    width: 220px;
+    background: white;
+    padding: 20px 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.why-card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* FAQ Section */
+.faq {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+}
+
+/* Center the FAQ heading */
+.faq .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+/* Style for the accordion */
+.accordion {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center it */
+}
+
+/* Accordion item styles */
+.accordion-item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+/* Style for accordion headers */
+.accordion-button {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: white;
+    color: #333;
+    padding: 15px 20px;
+    border: none;
+    box-shadow: none;
+}
+
+/* Remove default Bootstrap styles when button is collapsed */
+.accordion-button:not(.collapsed) {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Smooth transition for collapsing effect */
+.accordion-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Accordion body style */
+.accordion-body {
+    font-size: 1rem;
+    color: #555;
+    padding: 20px;
+    text-align: left;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0 0 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-container > div {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Footer Headings */
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* About & Contact */
+.footer p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+/* Quick Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 8px 0;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #007bff;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.4rem;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    padding: 15px 0;
+    background-color: #111;
+    font-size: 0.9rem;
+}
