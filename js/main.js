@@ -20,3 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(smoothScroll, 20); // Adjust interval for smoother effect
 });
+
+
+const words = ["Wardrobe", "Kitchen", "Full Home"];
+let wordIndex = 0;
+const animatedText = document.getElementById("animated-text");
+
+function changeText() {
+  animatedText.style.opacity = "0"; // Fade out
+  setTimeout(() => {
+    animatedText.textContent = words[wordIndex];
+    animatedText.style.opacity = "1"; // Fade in
+    wordIndex = (wordIndex + 1) % words.length;
+  }, 500);
+}
+
+setInterval(changeText, 2000);
