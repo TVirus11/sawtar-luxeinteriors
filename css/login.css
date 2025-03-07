@@ -1,0 +1,202 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Dark gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Brand Container */
+.brand-container {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.brand-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Login Box - Glassmorphism */
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    margin-top: 80px;
+    color: white;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-box:hover {
+    transform: scale(1.03);
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.subtext {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+/* Role Selection */
+.role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.role-selection input {
+    display: none;
+}
+
+.role-selection label {
+    background: rgba(0, 200, 255, 0.2);
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+.role-selection input:checked + label {
+    background: rgba(0, 200, 255, 0.5);
+    color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 200, 255, 0.8);
+}
+
+/* Input Fields */
+.input-group {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 100%;
+    display: flex;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 200, 255, 0.5);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00C8FF;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px rgba(0, 200, 255, 0.4);
+}
+
+button:hover {
+    background: #008CBA;
+    box-shadow: 0px 0px 15px rgba(0, 200, 255, 0.8);
+}
+
+/* Sign Up Link */
+.signup-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #00C8FF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+#error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+
+/* Close Button (Compact & Fixed in Top-Right) */
+.close-btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    z-index: 1000; /* Ensures it's above all elements */
+    width: auto; /* Makes sure it doesn’t take full width */
+    height: auto;
+    padding: 5px;
+}
+
+.close-btn:hover {
+    color: #00C8FF;
+    transform: scale(1.2);
+}
+
+
