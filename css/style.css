@@ -1,8 +1,12 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
 }
 
 /* Navbar */
@@ -89,6 +93,42 @@ body {
         box-shadow: none;
     }
 }
+
+/* Floating Navbar Effect */
+@media (min-width: 992px) { /* Applies only on larger screens */
+    .navbar {
+        position: fixed;
+        top: 20px; /* Adjust this for more or less floating effect */
+        left: 50%;
+        transform: translateX(-50%); /* Centers the navbar */
+        width: 80%; /* Adjust width as needed */
+        max-width: 1200px; /* Limits navbar width */
+        background: rgba(0, 0, 0, 0.6); /* Transparent glass effect */
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        border-radius: 20px; /* Curved edges */
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        padding: 12px 25px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem; /* Slightly bigger brand name */
+    }
+}
+
+/* Mobile Version (Unchanged) */
+@media (max-width: 991px) {
+    .navbar {
+        width: 100%;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+/* Floating Navbar Effect */
 
 
 /* Hero Section */
