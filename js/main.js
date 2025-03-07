@@ -1,3 +1,13 @@
+window.addEventListener("scroll", function () {
+  let navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const scrollContainer = document.querySelector(".why-choose-container");
 
@@ -20,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(smoothScroll, 20); // Adjust interval for smoother effect
 });
-
 
 const words = ["Wardrobe", "Kitchen", "Full Home"];
 let wordIndex = 0;
