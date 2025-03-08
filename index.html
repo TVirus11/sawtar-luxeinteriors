@@ -20,6 +20,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Model Viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -99,12 +102,14 @@
                             More
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Careers</a></li>
+                            <li><a class="dropdown-item" href="#">Contact Us</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="#">Terms & Conditions</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -211,6 +216,11 @@
                         <span class="arrow">&#x2192;</span>
                     </div>
                 </div>
+
+                <!-- 3D Sofa Display -->
+                <model-viewer src="./assets/sofa2.glb" alt="3D Sofa" auto-rotate camera-controls ar shadow-intensity="1"
+                    style="width: 100%; max-width: 600px; height: 400px;">
+                </model-viewer>
             </div>
         </div>
     </section>

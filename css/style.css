@@ -87,6 +87,10 @@ h1, h2, h3, h4, h5, h6 {
     color: black !important; 
 }
 
+.dropdown-divider{
+    border-top: 1.5px solid rgb(139, 137, 137);
+}
+
 /* Smooth shadow transition when scrolling */
 @media (max-width: 991px) {
     .navbar {
@@ -158,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .navbar-brand {
-        font-size: 1.5rem; /* Slightly bigger brand name */
+        font-size: 1.3rem; /* Slightly bigger brand name */
     }
 }
 
