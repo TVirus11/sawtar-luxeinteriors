@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: url('../images/about-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-overlay h1 {
+    font-size: 3.5rem;
+    margin-top: 0;
+    opacity: 0;
+    animation: slideUp 1s ease-out 0.3s forwards;
+}
+
+.hero-overlay p {
+    font-size: 1.4rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.6s forwards;
+}
+
+/* About Content */
+.about-content {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out 0.8s forwards;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    animation: slideUp 1.2s ease-out 1s forwards;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Vision & Mission */
+.vision-mission {
+    background: #fff;
+    padding: 80px 20px;
+    opacity: 0;
+    animation: fadeIn 1.3s ease-in-out 1.2s forwards;
+}
+
+.vision-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vision-card h3 {
+    font-size: 1.9rem;
+    color: #00C8FF;
+}
+
+.vision-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Unique Approach */
+.unique-approach {
+    padding: 80px 20px;
+    background: #ececec;
+    text-align: center;
+}
+
+.unique-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.unique-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.unique-card i {
+    font-size: 2.2rem;
+    color: #00C8FF;
+    margin-bottom: 10px;
+}
+
+.unique-card p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.unique-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Call to Action */
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #00C8FF, #005b7f);
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1.4s ease-in-out 1.6s forwards;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+}
+
+.cta p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.cta a {
+    text-decoration: none;
+    background: white;
+    color: #00C8FF;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cta a:hover {
+    background: #fff;
+    color: #003c56;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
