@@ -1,0 +1,142 @@
+/* Careers Page Styles */
+
+/* Hero Section */
+.careers-hero {
+    background: url('../images/careers-hero.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.careers-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+}
+
+/* Job Listings */
+.job-listings {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Job Cards */
+.job-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.job-card-header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 20px;
+}
+
+.job-card-header h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.job-card-header p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.job-card-body {
+    padding: 20px;
+    font-size: 16px;
+    color: #444;
+}
+
+.job-card-footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.job-card-footer .btn {
+    background: #3498db;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.job-card-footer .btn:hover {
+    background: #2980b9;
+}
+
+/* Company Culture */
+.company-culture {
+    text-align: center;
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.culture-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.culture-item {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.culture-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.culture-item img:hover {
+    transform: scale(1.1);
+}
