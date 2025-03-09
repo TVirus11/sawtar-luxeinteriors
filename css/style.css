@@ -48,15 +48,13 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1); 
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-item .nav-link[aria-current="page"] {
+.navbar-nav .nav-link.active {
     color: #00C8FF !important; 
     font-weight: bold;
     position: relative;
 }
 
-.navbar-nav .nav-link.active::after,
-.navbar-nav .nav-item .nav-link[aria-current="page"]::after {
+.navbar-nav .nav-link.active::after {
     content: "";
     display: block;
     width: 100%;
@@ -65,30 +63,6 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: -5px;
     left: 0;
-}
-
-.navbar-nav .nav-item.dropdown:hover .nav-link {
-    color: #00C8FF !important; 
-}
-
-.dropdown-menu {
-    background-color: black !important; 
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.dropdown-menu .dropdown-item {
-    color: white !important;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.dropdown-menu .dropdown-item:hover {
-    background-color: #00C8FF !important; 
-    color: black !important; 
-}
-
-.dropdown-divider{
-    border-top: 1.5px solid rgb(139, 137, 137);
 }
 
 /* Smooth shadow transition when scrolling */

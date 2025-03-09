@@ -1,21 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
   let currentPage = window.location.pathname.split("/").pop().toLowerCase();
-  console.log("Current Page Detected:", currentPage);
+  console.log("🔍 Current Page Detected:", currentPage);
 
-  let navLinks = document.querySelectorAll(
-    ".navbar-nav .nav-link, .navbar-nav .dropdown-item"
-  );
+  if (currentPage === "" || currentPage === "index.html") {
+    currentPage = "index.html"; // Default to home if empty
+  }
 
+  let navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  // Remove active class from all links first
   navLinks.forEach((link) => link.classList.remove("active"));
 
   navLinks.forEach((link) => {
     let linkPage = link.getAttribute("href")?.split("/").pop().toLowerCase();
-    console.log("Checking link:", linkPage, "vs Current Page:", currentPage);
+    if (!linkPage) return;
+
+    if (linkPage === "" || linkPage === "index.html") {
+      linkPage = "index.html";
+    }
+
+    console.log(
+      `🔗 Checking: ${link.textContent.trim()} (${linkPage}) vs Current Page: ${currentPage}`
+    );
+
     if (linkPage === currentPage) {
-      link.classList.add("active");
-      console.log("✅ Active link set:", link.textContent);
+      link.classList.add("active"); // Set active only for the correct link
+      console.log(`✅ Active link set: ${link.textContent.trim()}`);
     }
   });
+
+  // Ensure Home is **not active** if you're on another page
+  let homeLink = document.querySelector('.nav-link[href="index.html"]');
+  if (homeLink && currentPage !== "index.html") {
+    homeLink.classList.remove("active");
+    console.log("🚫 Home link deactivated");
+  }
 });
 
 
